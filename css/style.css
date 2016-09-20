@@ -401,6 +401,9 @@ video {
   .main-visual .content-visual p {
     letter-spacing: 0.05rem;
   }
+  .video-container iframe {
+    overflow-y: scroll
+  }
 }
 
 .main-visual .content-visual {
@@ -439,12 +442,6 @@ video {
   -webkit-transition: .2s;
   transition: .2s;
 }
-
-
-/*.main-visual a:first-of-type {
-  margin-right: 20px;
-}
-*/
 
 .main-visual a:hover {
   background-color: rgba(255, 255, 255, 0.1);
@@ -609,6 +606,12 @@ pre {
   height: 100%;
 }
 
+.form-container{
+  margin: 0 auto;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 
 /*===========================
  footer
@@ -636,6 +639,3 @@ pre {
 .twitter-share-button {
   margin-right: 1.25rem;
 }
-
-
-/*# sourceMappingURL=_datamaps/style.css.map */
