@@ -1,0 +1,641 @@
+@charset "UTF-8";
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+code,
+img,
+small,
+strong,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+
+/*
+
+Orginal Style from ethanschoonover.com/solarized (c) Jeremy Hull <sourdrums@gmail.com>
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #002b36;
+  color: #839496;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #586e75;
+}
+
+
+/* Solarized Green */
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-addition {
+  color: #859900;
+}
+
+
+/* Solarized Cyan */
+
+.hljs-number,
+.hljs-string,
+.hljs-meta .hljs-meta-string,
+.hljs-literal,
+.hljs-doctag,
+.hljs-regexp {
+  color: #2aa198;
+}
+
+
+/* Solarized Blue */
+
+.hljs-title,
+.hljs-section,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class {
+  color: #268bd2;
+}
+
+
+/* Solarized Yellow */
+
+.hljs-attribute,
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-class .hljs-title,
+.hljs-type {
+  color: #b58900;
+}
+
+
+/* Solarized Orange */
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-subst,
+.hljs-meta,
+.hljs-meta .hljs-keyword,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-link {
+  color: #cb4b16;
+}
+
+
+/* Solarized Red */
+
+.hljs-built_in,
+.hljs-deletion {
+  color: #E2725B;
+}
+
+.hljs-formula {
+  background: #073642;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.header {
+  width: 100%;
+}
+
+
+/*===========================
+ 共通
+=============================*/
+
+body {
+  font-size: 0.875rem;
+  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+}
+
+a {
+  color: #333;
+}
+
+p {
+  line-height: 1.5;
+}
+
+li {
+  list-style: none;
+}
+
+
+/*===========================
+ header
+=============================*/
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+  z-index: 2;
+}
+
+.header-inner {
+  width: 90%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.nav:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.site-name {
+  height: 50px;
+  margin-right: 40px;
+  float: left;
+  line-height: 50px;
+}
+
+.site-name a {
+  padding: 15px 0;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: #E2725B;
+  letter-spacing: 0.03rem;
+}
+
+.site-name a:hover {
+  color: #e2c85b;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.nav-lists {
+  float: right;
+}
+
+.nav-lists:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.nav-lists li {
+  float: left;
+}
+
+.nav-lists li:first-child {
+  margin: 0;
+}
+
+.nav-lists li a {
+  display: block;
+  position: relative;
+  height: 50px;
+  padding: 17px 10px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.875rem;
+}
+
+.nav-lists li a:after {
+  content: "";
+  display: block;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ed775e;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.nav-lists li a:hover:after {
+  opacity: 1;
+}
+
+.flex-pulldown-more {
+  background-color: #eee;
+}
+
+.flex-pulldown-more button {
+  display: block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border: none;
+  background: none;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.875rem;
+  outline: none;
+}
+
+.flex-pulldown-more button:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 9px;
+  height: 9px;
+  margin: auto;
+  border: solid #666;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transition: -webkit-transform .4s;
+  transition: transform .4s;
+}
+
+.flex-pulldown-more button:hover {
+  cursor: pointer;
+}
+
+.open button:before {
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+
+/*===========================
+ Conent
+=============================*/
+
+.main-visual {
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  margin-top: 44px;
+  -webkit-background: -webkit-linear-gradient(225deg, rgba(228, 169, 114, 0.8), rgba(153, 65, 216, 0.8));
+  background: linear-gradient(225deg, rgba(228, 169, 114, 0.8), rgba(153, 65, 216, 0.8));
+}
+
+video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  background: url(polina.jpg) no-repeat;
+  background-size: cover;
+  mix-blend-mode: overlay;
+}
+
+@media screen and (max-device-width: 800px) {
+  .main-visual {
+    background: linear-gradient(-45deg, rgba(229, 93, 135, .7), rgba(95, 195, 228, .7)), url(../images/halloween.JPG) center center / cover no-repeat;
+    background-blend-mode: multiply;
+  }
+  video {
+    display: none;
+  }
+  .main-visual .content-visual p {
+    letter-spacing: 0.05rem;
+  }
+}
+
+.main-visual .content-visual {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  /* Safari用 */
+  transform: translate(-50%, -50%);
+  display: block;
+  color: #fff;
+  vertical-align: middle;
+  text-align: center;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.main-visual .content-visual p {
+  letter-spacing: 0.25rem;
+}
+
+.main-visual p {
+  font-size: 1.25rem;
+}
+
+.main-visual a {
+  display: inline-block;
+  width: 288px;
+  height: 40px;
+  margin-top: 20px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+
+/*.main-visual a:first-of-type {
+  margin-right: 20px;
+}
+*/
+
+.main-visual a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.main {
+  margin: 100px auto 0;
+}
+
+.section {
+  width: 90%;
+  max-width: 700px;
+  margin: 5rem auto 0;
+}
+
+.section:first-child {
+  margin-top: 0;
+}
+
+.section h1 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 2rem;
+}
+
+.section h2 {
+  margin-top: 2.5rem;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.25rem;
+}
+
+.section p {
+  margin-top: 1rem;
+}
+
+.section li + li {
+  margin-top: 1rem;
+}
+
+.section li a {
+  text-decoration: underline;
+}
+
+.section li a:hover {
+  text-decoration: none;
+}
+
+.section-inner {
+  margin-top: 2.5rem;
+}
+
+.item {
+  background: #fff;
+  padding: 15px;
+  margin: 5px;
+  text-align: center;
+}
+
+.item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.item .position {
+  text-align: center;
+}
+
+.item p {
+  text-align: left;
+}
+
+@media ( min-width: 600px) {
+  .flexbox {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .item {
+    width: 30%;
+  }
+}
+
+.drag-area {
+  width: 80%;
+  height: 150px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+}
+
+pre {
+  margin-top: 1.25rem;
+}
+
+.hljs {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.li-browse li {
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  background-color: #eee;
+}
+
+.li-browse .fa {
+  color: #777;
+  font-size: 2rem;
+}
+
+.li-browse span {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.75rem;
+}
+
+.wrap-options {
+  margin-top: 2.5rem;
+}
+
+.row-option {
+  margin-top: 1.25rem;
+}
+
+.row-option:first-child {
+  margin-top: 0;
+}
+
+.row-option p {
+  padding-left: 1rem;
+}
+
+.version {
+  font-size: 1.125rem;
+}
+
+.version span {
+  margin-left: 1.25rem;
+  color: #888;
+  font-size: 0.75rem;
+}
+
+
+/*===========================
+ video
+=============================*/
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/*===========================
+ footer
+=============================*/
+
+.footer {
+  height: 200px;
+  margin-top: 5rem;
+  border-top: 1px solid #ccc;
+  background-color: #e2c85b;
+  text-align: center;
+  line-height: 200px;
+}
+
+.copy {
+  color: #fff;
+  font-size: 0.875rem;
+}
+
+.copy a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.twitter-share-button {
+  margin-right: 1.25rem;
+}
+
+
+/*# sourceMappingURL=_datamaps/style.css.map */
