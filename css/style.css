@@ -433,7 +433,7 @@ video {
   display: inline-block;
   width: 288px;
   height: 40px;
-  margin-top: 20px;
+  margin: 20px auto 0px auto;
   border: 1px solid #fff;
   border-radius: 3px;
   color: #fff;
